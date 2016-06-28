@@ -1,3 +1,5 @@
+# EmansToolkit
+
 Personal proejct over the summer of 2016 to brush up my skills before my placement. This program essentially contains all helpful functions and tools that I may need when on my computer, doing this makes all my needs easy to access. 
 
 I will be using Java for this with various frameworks. This will be an ungoing project. I will always be updating and adding changes to this project.
