@@ -11,3 +11,5 @@ Essentially how this works is that there will be a 'main screen'. In that screen
  - Added Password validation incase I want to protect any sensitive data. 
  - Implemented a custom Notepad I built. (Save/Load functionality added).
  
+####**Version 1.1**
+ - Added RSS news reader for BBC News, Guardian and Telegraph..
