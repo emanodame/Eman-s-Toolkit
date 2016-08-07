@@ -1,10 +1,12 @@
 # EmansToolkit
 
-Personal proejct over the summer of 2016 to brush up my skills before my placement. This program essentially contains all helpful functions and tools that I may need when on my computer, doing this makes all my needs easy to access. 
+Personal project over the summer of 2016 to brush up my skills before my placement. This program essentially contains all helpful functions and tools that I may need when on my computer, doing this makes all my needs easy to access.
 
-I will be using Java for this with various frameworks. This will be an ungoing project. I will always be updating and adding changes to this project.
+I will be using Java for this with various frameworks. This will be an ongoing project. I will always be updating and adding changes to this project.
 
 Essentially how this works is that there will be a 'main screen'. In that screen there is a textbox to put commands. These commands represent different programs or tools. So for example entering 'txt' and pressing enter on the main screen will load up my personal notepad. 
+
+This will be a program I will keep working on indefinitely. As I learn more at Uni/Placement I will be applying those skills to this program making it more advanced.
 
 ####**Version 1.0**
  - Implemented my personal Grade Calculator.  
