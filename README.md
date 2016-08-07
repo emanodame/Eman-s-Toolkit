@@ -13,3 +13,7 @@ Essentially how this works is that there will be a 'main screen'. In that screen
  
 ####**Version 1.1**
  - Added RSS news reader for BBC News, Guardian and Telegraph..
+
+####**Version 1.1.1**
+ - Made the focus of trying to change all pre Java 8 code to Java 8. (Streams/Lambdas)
+ - Improved my Notepad program so it does not duplicate content when saved.
