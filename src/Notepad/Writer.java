@@ -1,6 +1,7 @@
 package Notepad;
 
 import IntroScreen.MainScreen;
+import IntroScreen.ProgramSelector;
 import javafx.geometry.Orientation;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
@@ -24,8 +25,10 @@ public class Writer{
     }
 
     public Scene getNotepadScene() {
+        previousWindow();
         notepadLayoutSetup();
-        notepadLoadText();
+        loadTextToScreen();
+        notepadSaveText();
         return notepadScene;
     }
 
@@ -39,26 +42,32 @@ public class Writer{
         notepadLayout.setAlignment(Pos.TOP_CENTER);
     }
 
-    private void notepadLoadText() {
-      notepadSaveText();
-        notepadScene.setOnKeyPressed((event) -> {
-            if (event.getCode() == KeyCode.ESCAPE) {
-                MainScreen.getCurrentStage().setScene(MainScreen.getCurrentScene());
-            }
-        });
-
+    private void loadTextToScreen(){
         try {
             inputArea.setText(Load.loadTextFromFile());
         } catch (IOException e) {
             inputArea.setText("Error. Could not load text.");
         }
     }
+
     private void notepadSaveText(){
 
         inputArea.setOnKeyPressed((event) -> {
             if (event.isControlDown() && event.getCode() == KeyCode.S) {
-                new Save(inputArea).saveToFile();
-                System.out.println("Saved!");
+                try {
+                    new Save(inputArea);
+                    System.out.println("Saved!");
+                }catch(IOException e){
+
+                }
+            }
+        });
+    }
+
+    private void previousWindow(){
+        inputArea.setOnKeyPressed((event) -> {
+            if(event.getCode() == KeyCode.ESCAPE){
+                new MainScreen();
             }
         });
     }

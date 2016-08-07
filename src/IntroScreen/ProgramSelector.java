@@ -13,19 +13,20 @@ public class ProgramSelector  {
 
     public void toolExecutor() {
         switch (optionText){
-                case "calc":
+            case "calc":
                 new Initialinput().foundationMaker();
-                    break;
+                break;
 
-                case "txt":
-                    if(new PasswordValidation().verify()){
+            case "txt":
+                  /*  if(new PasswordValidation().verify()){
                         MainScreen.getCurrentStage().setScene(new Writer().getNotepadScene());
-                    }
-                     break;
+                    }*/
+                MainScreen.getCurrentStage().setScene(new Writer().getNotepadScene());
+                break;
 
-                case "psh":
-                        MainScreen.getCurrentStage().setScene(new PushInfoToPhone().getPushWriterScene());
-                    break;
+            case "psh":
+                MainScreen.getCurrentStage().setScene(new PushInfoToPhone().getPushWriterScene());
+                break;
         }
     }
 }
