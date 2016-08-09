@@ -20,8 +20,21 @@ public class Save {
 
     public Save(TextArea textArea) throws IOException {
         this.textArea = textArea;
+        fileChecker(file);
         skipToNewChanges();
         writerOperation();
+    }
+
+    private void fileChecker(File file){
+        if(file.exists()){
+            return;
+        }else{
+            try {
+                file.createNewFile();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private char[] fileToArray() throws IOException {

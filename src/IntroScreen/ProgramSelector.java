@@ -2,7 +2,6 @@ package IntroScreen;
 import GradeCalculator.Initialinput;
 import Notepad.Writer;
 import PushToPhone.PushInfoToPhone;
-import Validation.PasswordValidation;
 
 public class ProgramSelector  {
     private String optionText;
@@ -22,10 +21,12 @@ public class ProgramSelector  {
                         MainScreen.getCurrentStage().setScene(new Writer().getNotepadScene());
                     }*/
                 MainScreen.getCurrentStage().setScene(new Writer().getNotepadScene());
+                MainScreen.setProgramSceneSequence(new Writer().getNotepadScene());
                 break;
 
             case "psh":
                 MainScreen.getCurrentStage().setScene(new PushInfoToPhone().getPushWriterScene());
+                MainScreen.setProgramSceneSequence(new PushInfoToPhone().getPushWriterScene());
                 break;
         }
     }

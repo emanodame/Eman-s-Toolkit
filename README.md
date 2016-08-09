@@ -19,3 +19,7 @@ This will be a program I will keep working on indefinitely. As I learn more at U
 ####**Version 1.1.1**
  - Made the focus of trying to change all pre Java 8 code to Java 8. (Streams/Lambdas)
  - Improved my Notepad program so it does not duplicate content when saved.
+
+####**Version 1.1.5**
+ - Overall improvements to the project.
+ - Pressing "Esc" key goes back to the previous window.

@@ -25,10 +25,9 @@ public class Writer{
     }
 
     public Scene getNotepadScene() {
-        previousWindow();
         notepadLayoutSetup();
-        loadTextToScreen();
         notepadSaveText();
+        previousWindow();
         return notepadScene;
     }
 
@@ -40,6 +39,9 @@ public class Writer{
         notepadLayout.getChildren().add(titleText);
         notepadLayout.getChildren().add(inputArea);
         notepadLayout.setAlignment(Pos.TOP_CENTER);
+
+        loadTextToScreen();
+
     }
 
     private void loadTextToScreen(){
@@ -51,14 +53,12 @@ public class Writer{
     }
 
     private void notepadSaveText(){
-
         inputArea.setOnKeyPressed((event) -> {
             if (event.isControlDown() && event.getCode() == KeyCode.S) {
                 try {
                     new Save(inputArea);
-                    System.out.println("Saved!");
                 }catch(IOException e){
-
+                    e.printStackTrace();
                 }
             }
         });
@@ -67,7 +67,8 @@ public class Writer{
     private void previousWindow(){
         inputArea.setOnKeyPressed((event) -> {
             if(event.getCode() == KeyCode.ESCAPE){
-                new MainScreen();
+                MainScreen.previousPosition();
+                MainScreen.getCurrentStage().setScene(MainScreen.getProgramSceneSequence()[MainScreen.getStagePosition()]);
             }
         });
     }
