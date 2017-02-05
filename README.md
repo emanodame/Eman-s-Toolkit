@@ -21,3 +21,6 @@ Essentially how this works is that there will be a 'main screen'. In that screen
 ####**Version 1.1.5**
  - Overall improvements to the project.
  - Pressing "Esc" key goes back to the previous window.
+
+####**UPDATE**
+ - Major works in the making!
